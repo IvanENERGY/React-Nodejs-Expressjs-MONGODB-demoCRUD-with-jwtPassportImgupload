@@ -4,7 +4,8 @@ const mongoose=require('mongoose');
 const cors=require('cors')
 const app=express();
 app.set("port",process.env.PORT||3000);
-mongoose.connect("mongodb://localhost:27017/todo_db");
+mongoose.connect("mongodb+srv://ivanchantf:<password>@cluster0.ud4o2vd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/todo_db");
+// mongoose.connect("mongodb://localhost:27017/todo_db");
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
