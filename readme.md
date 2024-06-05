@@ -1,10 +1,11 @@
 
-
+<h1>BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors <br>
 npm start<br>
 <hr>
 ---------
+<h1>FRONTEND</h1>
 npx create-react-app . --template typescript<br>
 <br>
 npm start<br>
