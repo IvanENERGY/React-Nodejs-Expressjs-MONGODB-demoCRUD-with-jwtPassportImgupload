@@ -7,13 +7,15 @@ export const DeleteTask=()=>{
     const [name,setName]=useState("");
 
     useEffect(()=>{
-        axios.get(`http://localhost:3000/api/tasks/${id}`)
+        // axios.get(`http://localhost:3000/api/tasks/${id}`)
+        axios.get(`https://mern-crud-to-do-list-node.vercel.app/api/tasks/${id}`)
         .then((response:any)=>{
             setName(response.data.data.name);
         })
     },[])
     const deleteHandler=()=>{
-        axios.delete(`http://localhost:3000/api/tasks/${id}/delete`)
+        // axios.delete(`http://localhost:3000/api/tasks/${id}/delete`)
+        axios.delete(`https://mern-crud-to-do-list-node.vercel.app/api/tasks/${id}/delete`)
         .then((result)=>{
             navigate("/tasks");
         })

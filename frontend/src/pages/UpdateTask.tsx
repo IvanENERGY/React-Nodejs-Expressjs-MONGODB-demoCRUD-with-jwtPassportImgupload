@@ -39,7 +39,8 @@ export const UpdateTask=()=>{
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3000/api/tasks/${id}`)
+        // axios.get(`http://localhost:3000/api/tasks/${id}`)
+        axios.get(`https://mern-crud-to-do-list-node.vercel.app/api/tasks/${id}`)
         .then((response:any)=>{
             setName(response.data.data.name);
             setDeadline(formatDate(new Date(response.data.data.deadline).toLocaleString()));
@@ -90,7 +91,8 @@ export const UpdateTask=()=>{
                 deadline,
                 reps
             }
-            axios.put(`http://localhost:3000/api/tasks/${id}/update`,data)
+            // axios.put(`http://localhost:3000/api/tasks/${id}/update`,data)
+            axios.put(`https://mern-crud-to-do-list-node.vercel.app/api/tasks/${id}/update`,data)
             .then((result)=>{
                 navigate("/tasks");
             })

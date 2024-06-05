@@ -20,7 +20,8 @@ export const CreateTask=()=>{
         
     const mySubmitHandler=(data:ITaskData)=>{
          console.log(data);//object {name:...,deadline:...,reps,...}
-        axios.post(`http://localhost:3000/api/tasks`,data)
+        // axios.post(`http://localhost:3000/api/tasks`,data)
+        axios.post(`https://mern-crud-to-do-list-node.vercel.app/api/tasks`,data)
         .then((result)=>{
             navigate("/tasks");
         })
