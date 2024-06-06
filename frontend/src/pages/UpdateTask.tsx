@@ -86,7 +86,6 @@ export const UpdateTask=()=>{
         event.preventDefault();
         //object {name:...,deadline:...,reps,...}
         if(validateForm()){
-           
             let data={
                 name,
                 deadline,
