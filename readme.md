@@ -77,3 +77,22 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 ![](/renderfront.png)
 <img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
 
+<h1>Deployment Using PM2 </h1>
+<pre>
+npm intall pm2 -g
+npm install serve -g
+</pre>
+<h2>For deploying backend</h2>
+<ol>
+<li>navigate to the backend folder</li>
+<li>pm2 start app.js</li>
+</ol>
+<h2>For deploying frontend</h2>
+<ol>
+<li>navigate to the frontend folder</li>
+<li>npm run build</li>
+<li>pm2 serve build 3001 --spa</li>
+</ol>
+<h2>pm2 save for saving all running pm2 processes </h2>
+<h2>pm2 resurrect for saving all running pm2 processes</h2>
+<p>Better mark down originalSourceCodePath, Service running port for migration purpose</p>
