@@ -93,6 +93,6 @@ npm install serve -g
 <li>npm run build</li>
 <li>pm2 serve build 3001 --spa</li>
 </ol>
-<h2>pm2 save for saving all running pm2 processes </h2>
-<h2>pm2 resurrect for saving all running pm2 processes</h2>
+<h2>"pm2 save" for saving all running pm2 processes </h2>
+<h2>"pm2 resurrect" for restore all running pm2 processes</h2>
 <p>Better mark down originalSourceCodePath, Service running port for migration purpose</p>
