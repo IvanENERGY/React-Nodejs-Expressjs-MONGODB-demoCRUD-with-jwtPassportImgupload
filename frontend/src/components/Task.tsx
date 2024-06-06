@@ -16,11 +16,11 @@ export const Task = (props:props)=>{
         
     }
 
-    
+    var adjustedDT=new Date(task.deadline).toLocaleString("en-GB")
     return (
             <tr>
                <td>{task.name}</td> 
-               <td>{task.deadline.toString()}</td> 
+               <td>{adjustedDT}</td> 
                <td>{task.reps}</td>
                
                <button onClick={updateHandler}>UPDATE</button>
