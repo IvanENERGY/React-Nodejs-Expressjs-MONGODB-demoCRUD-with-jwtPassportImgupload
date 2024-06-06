@@ -9,7 +9,8 @@ export const ReadAllTask=()=>{
    
     useEffect(()=>{
         // axios.get("http://localhost:3000/api/tasks")
-        axios.get("https://mern-crud-todolist-be.onrender.com/api/tasks")
+        console.log(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`);
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
         .then((response:any)=>{
            setLiTask(response.data.data);
            setLoading(false);

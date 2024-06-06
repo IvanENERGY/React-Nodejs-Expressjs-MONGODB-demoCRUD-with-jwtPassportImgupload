@@ -40,7 +40,7 @@ export const UpdateTask=()=>{
 
     useEffect(()=>{
         // axios.get(`http://localhost:3000/api/tasks/${id}`)
-        axios.get(`https://mern-crud-todolist-be.onrender.com/api/tasks/${id}`)
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`)
         .then((response:any)=>{
             setName(response.data.data.name);
             setDeadline(formatDate(new Date(response.data.data.deadline).toLocaleString()));
@@ -81,18 +81,32 @@ export const UpdateTask=()=>{
         setErrors(errorsCopy);
         return valid;
     }
-
+    function shift8HourEarly(datetimeString:string) {
+        // Parse the datetime string into a Date object
+        let datetime = new Date(datetimeString);
+    
+        // Subtract 8 hours from the time
+        datetime.setHours(datetime.getHours() - 8);
+    
+        // Format the shifted datetime into ISO string format (YYYY-MM-DDTHH:MM:SS)
+        let shiftedDatetimeString = datetime.toISOString();
+    
+        // Return the shifted datetime string
+        return shiftedDatetimeString;
+    }
     const mySubmitHandler=(event:any)=>{
         event.preventDefault();
         //object {name:...,deadline:...,reps,...}
         if(validateForm()){
+            console.log(deadline);
+            setDeadline(shift8HourEarly(deadline));console.log("UP"+deadline);
             let data={
                 name,
                 deadline,
                 reps
             }
             // axios.put(`http://localhost:3000/api/tasks/${id}/update`,data)
-            axios.put(`https://mern-crud-todolist-be.onrender.com/api/tasks/${id}/update`,data)
+            axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}/update`,data)
             .then((result)=>{
                 navigate("/tasks");
             })

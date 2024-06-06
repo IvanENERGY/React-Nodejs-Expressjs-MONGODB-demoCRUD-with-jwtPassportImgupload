@@ -21,7 +21,7 @@ export const CreateTask=()=>{
     const mySubmitHandler=(data:ITaskData)=>{
          console.log(data);//object {name:...,deadline:...,reps,...}
         // axios.post(`http://localhost:3000/api/tasks`,data)
-        axios.post(`https://mern-crud-todolist-be.onrender.com/api/tasks`,data)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,data)
         .then((result)=>{
             navigate("/tasks");
         })
