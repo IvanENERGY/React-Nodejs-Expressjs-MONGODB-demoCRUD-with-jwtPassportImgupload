@@ -1,10 +1,12 @@
 const express=require('express');
 const router=require('./routes/index');
 const mongoose=require('mongoose');
-const cors=require('cors')
+const cors=require('cors');
+require('dotenv').config();
 const app=express();
 app.set("port",process.env.PORT||3000);
-mongoose.connect("mongodb+srv://ivanchantf:Yy6566683%40%402@cluster0.ud4o2vd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect(process.env.DB_URL);
+//mongoose.connect("mongodb+srv://ivan:y6566683@cluster0.03hgnwe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 // mongoose.connect("mongodb://localhost:27017/todo_db");
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());

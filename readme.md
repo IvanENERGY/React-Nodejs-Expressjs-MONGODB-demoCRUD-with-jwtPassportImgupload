@@ -1,7 +1,7 @@
 
 <h1>BACKEND</h1>
 npm init <br>
-npm install nodemon mongoose express http-status-codes cors mongodb <br>
+npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
 npm start<br>
 <hr>
 
