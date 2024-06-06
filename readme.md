@@ -74,3 +74,5 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 <p>Copy the productionbackendurl  </p>
 <h5>Create static site in render</h5>
 ![](/renderfront.png)
+<img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
+
