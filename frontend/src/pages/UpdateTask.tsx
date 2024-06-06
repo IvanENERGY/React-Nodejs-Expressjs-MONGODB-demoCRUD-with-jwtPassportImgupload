@@ -43,6 +43,7 @@ export const UpdateTask=()=>{
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`)
         .then((response:any)=>{
             setName(response.data.data.name);
+            console.log("retreivefromdbis"+response.data.data.deadline);
             setDeadline(formatDate(new Date(response.data.data.deadline).toString()));
             console.log("Displaying"+formatDate(new Date(response.data.data.deadline).toString()));
             setReps(response.data.data.reps);
