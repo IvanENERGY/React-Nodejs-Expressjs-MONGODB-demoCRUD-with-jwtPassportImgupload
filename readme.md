@@ -69,8 +69,8 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
     "license": "ISC"
   }
 </pre>
-<p>Create web services in render</p>
+<h5>Create web services in render</h5>
 ![](/renderback.png)
 <p>Copy the productionbackendurl  </p>
-<p>Create static site in render</p>
+<h5>Create static site in render</h5>
 ![](/renderfront.png)
