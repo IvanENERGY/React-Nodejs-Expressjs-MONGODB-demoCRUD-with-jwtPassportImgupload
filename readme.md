@@ -70,7 +70,7 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
   }
 </pre>
 <p>Create web services in render</p>
-![renderback.png](/renderback.png)
+![](/renderback.png)
 <p>Copy the productionbackendurl  </p>
 <p>Create static site in render</p>
-![renderfront.png](/renderfront.png)
+![](/renderfront.png)
