@@ -71,6 +71,9 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 </pre>
 <h5>Create web services in render</h5>
 ![](/renderback.png)
+<img width="538" alt="renderback" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/1e0e8198-8a83-4f02-be93-42db9d0d6371">
 <p>Copy the productionbackendurl  </p>
 <h5>Create static site in render</h5>
 ![](/renderfront.png)
+<img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
+
