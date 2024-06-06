@@ -9,7 +9,7 @@ export const ReadAllTask=()=>{
    
     useEffect(()=>{
         // axios.get("http://localhost:3000/api/tasks")
-        axios.get("https://mern-crud-to-do-list-node.vercel.app/api/tasks")
+        axios.get("https://mern-crud-todolist-be.onrender.com/api/tasks")
         .then((response:any)=>{
            setLiTask(response.data.data);
            setLoading(false);
