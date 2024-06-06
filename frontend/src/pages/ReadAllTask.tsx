@@ -8,7 +8,7 @@ export const ReadAllTask=()=>{
     const [isLoading,setLoading]=useState(true);
    
     useEffect(()=>{
-        // axios.get("http://localhost:3000/api/tasks")
+        console.log(`preforming axios.get(${process.env.REACT_APP_BACKEND_URL}/api/tasks)`)
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
         .then((response:any)=>{
            setLiTask(response.data.data);
