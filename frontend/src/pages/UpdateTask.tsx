@@ -37,13 +37,14 @@ export const UpdateTask=()=>{
         var formattedDate = year + "-" + month + "-" + day + "T" + hours + ":" + minutes;   
         return formattedDate;
     }
-
+    //Retreive the original value for the task
     useEffect(()=>{
         // axios.get(`http://localhost:3000/api/tasks/${id}`)
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`)
         .then((response:any)=>{
             setName(response.data.data.name);
             setDeadline(formatDate(new Date(response.data.data.deadline).toString()));
+            console.log("Displaying"+formatDate(new Date(response.data.data.deadline).toString()));
             setReps(response.data.data.reps);
             setLoading(false);
         })
