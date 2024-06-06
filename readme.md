@@ -47,3 +47,29 @@ REACT_APP_BACKEND_URL=http://localhost:3000
 <pre>
 axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 </pre>
+<h1>Deployment on render</h1>
+<p>Upload whole folder(backend+frontend) to gitHUb</p>
+<p>Configure Altas mongodb :set useracpw, set accessip 0.0.0.0 (all),get connection string
+<p>create package.json in outerfolder</p>
+<pre>
+{
+    "name": "todo-mern",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "install-server": "cd backend && npm install",
+      "start-server": "cd backend && node app.js",
+      "install-client": "cd frontend && npm install",
+      "build-client": "cd frontend && npm run build",
+      "start-client": "cd frontend && npm run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+</pre>
+<p>Create web services in render</p>
+![renderback.png](renderback.png)
+<p>Create static site in render</p>
+![renderfront.png](renderfront.png)
