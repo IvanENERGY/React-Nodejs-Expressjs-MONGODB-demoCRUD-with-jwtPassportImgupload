@@ -87,6 +87,7 @@ export const UpdateTask=()=>{
         event.preventDefault();
         //object {name:...,deadline:...,reps,...}
         if(validateForm()){
+            console.log("push to db is "+deadline);
             let data={
                 name,
                 deadline,
