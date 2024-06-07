@@ -106,6 +106,7 @@ npm install serve -g
 <li>go to C:\Program Files\MongoDB\Server\7.0\bin</li>
 <li>edit mongod config file</li>
 <li>bindIp: 192.168.1.17 (<-production machine u want everyone to access:can be checked using ipconfig)</li>
+<li>Restart mongodb services in window services; test the connection with string mongodb://192.168.1.17:27017/ in mongoCompass </li>
 <li>The path in backend (connect db)should be mongodb://192.168.1.17:27017/todo_db (todo_db is just example db name)</li>
 <li>The path in frontend (connect backend)should be http://192.168.1.17:3000</li>
 <li>Redeploy frontend+backend in pm2 ; => the application should be accessible by every device on the same local area network </li>
