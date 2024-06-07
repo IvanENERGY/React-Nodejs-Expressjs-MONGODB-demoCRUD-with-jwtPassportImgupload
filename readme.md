@@ -93,6 +93,18 @@ npm install serve -g
 <li>npm run build</li>
 <li>pm2 serve build 3001 --spa</li>
 </ol>
+<h2>"pm2 ls" for showing all running pm2 processes </h2>
 <h2>"pm2 save" for saving all running pm2 processes </h2>
 <h2>"pm2 resurrect" for restore all running pm2 processes</h2>
 <p>Better mark down originalSourceCodePath, Service running port for migration purpose</p>
+<h1>MongoDB setup for accessing within LAN </h1>
+<ol>
+<li>go to C:\Program Files\MongoDB\Server\7.0\bin</li>
+<li>edit mongod config file</li>
+<li>bindIp: 192.168.1.17 (<-production machine u want everyone to access:can be checked using ipconfig)</li>
+<li>The path in backend (connect db)should be mongodb://192.168.1.17:27017/todo_db (todo_db is just example db name)</li>
+<li>The path in frontend (connect backend)should be http://192.168.1.17:3000</li>
+<li>Redeploy frontend+backend in pm2 ; => the application should be accessible by every device on the same local area network </li>
+</ol>
+
+mongod
