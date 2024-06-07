@@ -1,7 +1,8 @@
 
 <h1>
 Version history</h1>
-<p>d36c236 is the last version before implementing authentication/login/logout</p>
+<p>b421689 is the first version include CRUD + authentication/login/logout</p>
+<p>d36c236 is the last version include only CRUD before implementing authentication/login/logout</p>
 <h1>BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
