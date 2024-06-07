@@ -85,18 +85,19 @@ npm install serve -g
 <h2>For deploying backend</h2>
 <ol>
 <li>navigate to the backend folder</li>
-<li>pm2 start app.js</li>
+<li>pm2 start app.js --name merntodolistapi3000</li>
 </ol>
 <h2>For deploying frontend</h2>
 <ol>
 <li>navigate to the frontend folder</li>
 <li>npm run build</li>
-<li>pm2 serve build 3001 --spa</li>
+<li>pm2 serve build 3001 --spa --name merntodolistreact3001</li>
 </ol>
 <h2>Useful Command</h2>
 
 <ul>
 <li>"pm2 ls" for showing all running pm2 processes</li>
+<li>"pm2 delete [idx] for delete""pm2 stop [idx] for stopping"</li>
 <li>"pm2 save" for saving all running pm2 processes</li>
 <li>"pm2 resurrect" for restore all running pm2 processes</li>
 </ul>
