@@ -1,4 +1,8 @@
 
+<h1>
+main-with-auth branch -- CRUD +authentication
+main branch -- only basic CRUD
+</h1>
 <h1>BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
