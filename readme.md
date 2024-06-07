@@ -113,4 +113,3 @@ npm install serve -g
 <li>Redeploy frontend+backend in pm2 ; => the application should be accessible by every device on the same local area network </li>
 </ol>
 
-mongod
