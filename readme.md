@@ -77,7 +77,7 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 ![](/renderfront.png)
 <img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
 
-<h1>Deployment Using PM2 </h1>
+<h1>Deployment Using PM2 inside LAN [work for both wired/wireless network] </h1>
 <pre>
 npm intall pm2 -g
 npm install serve -g
