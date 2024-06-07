@@ -1,8 +1,7 @@
 
 <h1>
-main-with-auth branch -- CRUD +authentication
-main branch -- only basic CRUD
-</h1>
+Version history</h1>
+<p>d36c236 is the last version before implementing authentication/login/logout</p>
 <h1>BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
@@ -122,5 +121,4 @@ npm install serve -g
 </ol>
 
 
-<p>d36c236 is the last version before implementing authentication/login/logout</p>
  
