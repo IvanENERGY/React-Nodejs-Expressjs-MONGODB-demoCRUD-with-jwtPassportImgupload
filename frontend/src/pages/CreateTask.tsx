@@ -4,9 +4,12 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import axios from "axios"
 import {useNavigate } from 'react-router-dom';
 import { ITaskData } from '../interface/ITaskData'
+import { UserContext } from "../App";
+import { useContext } from "react";
 
 
 export const CreateTask=()=>{
+    const [userContext,setUserContext] = useContext(UserContext);
     const navigate  =useNavigate();
     const schema = yup.object().shape({
         name: yup.string().required("Task name must be entered"),
@@ -21,8 +24,9 @@ export const CreateTask=()=>{
     const mySubmitHandler=(data:ITaskData)=>{
          console.log(data);//object {name:...,deadline:...,reps,...}
         // axios.post(`http://localhost:3000/api/tasks`,data)
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,data)
-        .then((result)=>{
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,data,{headers:{'token':userContext.token}})
+        .then((response)=>{
+            console.log(response);
             navigate("/tasks");
         })
         .catch((err)=>{

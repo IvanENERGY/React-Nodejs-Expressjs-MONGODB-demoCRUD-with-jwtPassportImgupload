@@ -2,6 +2,7 @@
 <h1>BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
+//authentication part: npm install  express-session passport@0.5.2 passport-local-mongoose jsonwebtoken <br>
 npm start<br>
 <h5>add .env file</h5>
 <pre>
@@ -13,6 +14,8 @@ PORT=3000
 <pre>
 require('dotenv').config();
 </pre>
+<p>/*The whole User Model,User Controller and authentication part in appjs can be omitted if there is no login/auth component in the full-stack app */ </p>
+
 <hr>
 
 <h1>FRONTEND</h1>
@@ -20,6 +23,7 @@ npx create-react-app . --template typescript<br>
 <br>
 npm start<br>
 npm install react-router-dom react-hook-form yup @hookform/resolvers axios dotenv <br>
+//authentication part:npm install js-cookie <br>
 <br>
 <br>
 <br>
@@ -113,3 +117,6 @@ npm install serve -g
 <li>Redeploy frontend+backend in pm2 ; => the application should be accessible by every device on the same local area network </li>
 </ol>
 
+
+<p>d36c236 is the last version before implementing authentication/login/logout</p>
+ 

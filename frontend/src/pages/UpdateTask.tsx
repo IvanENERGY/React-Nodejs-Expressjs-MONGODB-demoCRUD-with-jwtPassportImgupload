@@ -4,8 +4,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import {useForm} from "react-hook-form"
 // import * as yup from 'yup'
 // import {yupResolver} from '@hookform/resolvers/yup'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ITaskData } from '../interface/ITaskData';
+import { UserContext } from '../App';
 
 
 export const UpdateTask=()=>{
@@ -21,6 +22,7 @@ export const UpdateTask=()=>{
         deadline:"",
         reps:""
     });
+    const [userContext,setUserContext] = useContext(UserContext);
     const navigate  =useNavigate();
 
     function formatDate(inputDate:string) {
@@ -40,7 +42,7 @@ export const UpdateTask=()=>{
     //Retreive the original value for the task
     useEffect(()=>{
         // axios.get(`http://localhost:3000/api/tasks/${id}`)
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`)
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`,{headers:{'token':userContext.token}})
         .then((response:any)=>{
             setName(response.data.data.name);
             console.log("retreivefromdbis"+response.data.data.deadline);
@@ -95,7 +97,7 @@ export const UpdateTask=()=>{
                 reps
             }
             // axios.put(`http://localhost:3000/api/tasks/${id}/update`,data)
-            axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}/update`,data)
+            axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}/update`,data,{headers:{'token':userContext.token}})
             .then((result)=>{
                 navigate("/tasks");
             })

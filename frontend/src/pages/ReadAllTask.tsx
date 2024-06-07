@@ -1,15 +1,17 @@
 
 import axios from "axios";
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ITaskData } from '../interface/ITaskData';
 import {Task} from '../components/Task'
+import { UserContext } from "../App";
 export const ReadAllTask=()=>{
     const [liTask,setLiTask]=useState([]);
     const [isLoading,setLoading]=useState(true);
-   
+    const [userContext,setUserContext] = useContext(UserContext);
+    
     useEffect(()=>{
         console.log(`preforming axios.get(${process.env.REACT_APP_BACKEND_URL}/api/tasks)`)
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,{headers:{'token':userContext.token}})
         .then((response:any)=>{
            setLiTask(response.data.data);
            setLoading(false);

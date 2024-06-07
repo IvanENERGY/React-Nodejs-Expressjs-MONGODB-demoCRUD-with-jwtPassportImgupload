@@ -12,6 +12,34 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 
+/************authentication setup begins */
+/*****The whole auth part can be omitted if there is no login/auth component in the full-stack app */
+const expressSession=require('express-session');
+const passport=require('passport'); 
+const User=require('./models/user');
+
+app.use(expressSession({
+    secret:"somesecretpass",
+    cookie:{
+        maxAge:4000000,
+    },
+    resave:false,
+    saveUninitialized:false 
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use((req,res,next)=>{
+  res.locals.loggedIn=req.isAuthenticated(); 
+  res.locals.currentUser=req.user;
+  next();
+})
+/************authentication setup ends */
 
 
 app.use("/",router);
