@@ -161,7 +161,7 @@ svc.install();
 <li>Type the site name, set the Physical Path to the build folder (eg. C:\Users\user\Documents\MERNToDoList\frontend\build) </li>
 <li>Choose a port for binding (eg 3001) </li>
 <li>Click OK to create website</li>
-![iisStaticSiteConfig.png] 
+![iisStaticSiteConfig.png] <img width="1081" alt="iisStaticSiteConfig" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/65c245f8-7c27-47c5-b04b-113caef071e7">
 </ol>
 <h3>Configure Authentication</h3>
 <ol>
@@ -170,7 +170,7 @@ svc.install();
 <li>Add user </li>
 <li>Type Everyone, press check Names </li>
 <li>Set the permission</li>
-![iisUserConfig.png] 
+![iisUserConfig.png] <img width="730" alt="iisUserConfig" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/9b0f299b-a1ab-463a-b294-2597d697efd2">
 </ol>
 <h3>Configure Firewall</h3>
 <ol>
@@ -181,7 +181,7 @@ svc.install();
 <li>Type the specific local port you want other devices to have access (eg 3001)</li>
 <li>Choose Allow the connection ; Apply the rules for domain,private and public</li>
 <li>Set a Name for the rule and click finish</li>
-![iisFirewallConfig.png] 
+![iisFirewallConfig.png] <img width="1220" alt="iisFirewallConfig" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/6b134569-80bb-44f1-832d-22853dae05ae">
 </ol>
 <p>After configuring user permissions and firewall accessibility, the frontend app hosted on iis should be accessible by all local devices </p>
 <p>We can test it with 192.168.1.6(Your physicalIP):3001(port of the frontend u host) from another local device</p>
