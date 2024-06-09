@@ -40,6 +40,7 @@
 input{
   display: block; 
   font-size: xx-large;
+  margin: 30px auto;
 }
 form{
   width: fit-content;
@@ -54,4 +55,10 @@ button{
   width: 200px;
   height: 50px;
   margin:40px;
+}
+a{
+  margin: 20px;
+}
+img{
+  max-width: 200px;
 }

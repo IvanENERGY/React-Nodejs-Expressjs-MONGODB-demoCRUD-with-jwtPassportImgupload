@@ -1,6 +1,7 @@
 
 <h1>
 Version history</h1>
+<p>:Added Upload Image / Retrieve Image </p>
 <p>0b1e1d6: changed frontend authentication from using "setCoookies" to "passing into Context directly"</p>
 <p>b421689 is the  version include CRUD + createAc/login/authentication/logout (Using PassportJS,JsonWebToken)</p>
 <p>d36c236 is the  version include only CRUD (barebone)</p>
@@ -8,6 +9,7 @@ Version history</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
 //authentication part: npm install  express-session passport@0.5.2 passport-local-mongoose jsonwebtoken <br>
+//upload part: npm install multer <br>
 npm start<br>
 <h5>add .env file</h5>
 <pre>
@@ -158,7 +160,9 @@ svc.install();
 <ol>
 <li>navigate to frontend folder => npm run build</li>
 <li>Choose Add website in IIS</li>
-<li>Type the site name, set the Physical Path to the build folder (eg. C:\Users\user\Documents\MERNToDoList\frontend\build) </li>
+<li>Type the site name, set the Physical Path to the build folder (eg. C:\Users\user\Documents\MERNToDoList\frontend\build) 
+<br>(create new separate deployment folder and copy all the build files to the new folder is recommended)
+</li>
 <li>Choose a port for binding (eg 3001) </li>
 <li>Click OK to create website</li>
 ![iisStaticSiteConfig.png] <img width="1081" alt="iisStaticSiteConfig" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/65c245f8-7c27-47c5-b04b-113caef071e7">
@@ -185,6 +189,12 @@ svc.install();
 </ol>
 <p>After configuring user permissions and firewall accessibility, the frontend app hosted on iis should be accessible by all local devices </p>
 <p>We can test it with 192.168.1.6(Your physicalIP):3001(port of the frontend u host) from another local device</p>
+<h3>Updates on Code Changes</h3>
+<ul>
+<li>reinstall window service by running node node-win-services, restart service</li>
+<li>npm run build -> (if iis is using separate deployment folder as directory, move all the build files to that directory)->restart the iis static page</li>
+<li>Test the deployment on different devices</li>
+</ul>
 <h1>MongoDB setup for accessing within LAN </h1>
 <ol>
 <li>go to C:\Program Files\MongoDB\Server\7.0\bin</li>

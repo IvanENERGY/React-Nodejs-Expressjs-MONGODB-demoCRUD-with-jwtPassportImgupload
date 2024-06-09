@@ -17,7 +17,6 @@ app.use(cors());
 const expressSession=require('express-session');
 const passport=require('passport'); 
 const User=require('./models/user');
-
 app.use(expressSession({
     secret:"somesecretpass",
     cookie:{
@@ -34,13 +33,8 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use((req,res,next)=>{
-  res.locals.loggedIn=req.isAuthenticated(); 
-  res.locals.currentUser=req.user;
-  next();
-})
 /************authentication setup ends */
-
+app.use(express.static("public"))// for Image Retrieval Purpose Only
 
 app.use("/",router);
 app.listen(app.get("port"),()=>{console.log(`The app is listening on PORT ${app.get("port")}`)});

@@ -11,6 +11,8 @@ import { Nav } from './components/Nav';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { createContext, useState } from 'react';
+import { Upload } from './pages/Upload';
+import { UploadedImages } from './pages/UploadedImages';
 
 export const UserContext=createContext();
 
@@ -26,6 +28,8 @@ function App() {
           <Route path="/" element={<Home/>}/> 
           <Route path="/login" element={<Login/>}/> 
           <Route path="/register" element={<Register/>}/> 
+          <Route path="/images/upload" element={<Upload/>}/> 
+          <Route path="/images" element={<UploadedImages/>}/> 
           <Route path="/tasks/create" element={<CreateTask/>}/> 
           <Route path="/tasks" element={<ReadAllTask/>}/>
           <Route path="/tasks/:id/update" element={<UpdateTask/>}/> 

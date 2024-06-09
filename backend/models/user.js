@@ -9,7 +9,13 @@ const userSchema = new mongoose.Schema(
             trim:true,
             unique:true,
             require:true
-        }
+        },
+        images:[ //this can be omitted if there is no upload function in the full stack app
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"Image"
+            }
+        ]
     },
     {
         timestamps:true

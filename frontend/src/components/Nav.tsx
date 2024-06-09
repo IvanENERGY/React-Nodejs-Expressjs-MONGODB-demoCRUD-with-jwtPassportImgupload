@@ -21,9 +21,11 @@ export const Nav=()=>{
         <Link to="/">Home</Link>
         {userContext.username ?(
             <>
-            <Link to="/" onClick={logoutHandler}>Logout</Link>
-            <Link to="/tasks/create">Create</Link>
+            <Link to="/" onClick={logoutHandler}>Logout </Link>
+            <Link to="/tasks/create">Create </Link>
             <Link to="/tasks">ReadAll</Link>
+            <Link to="/images/upload">Upload</Link>
+            <Link to="/images">My Uploads </Link>
             </>
         )
         :<Link to="/login">Login</Link>}

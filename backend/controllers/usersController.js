@@ -49,6 +49,7 @@ module.exports={
             if (payload) {
                 User.findById(payload.data).then(user => {
                     if (user) {
+                        res.locals.currentUser=user;
                         next();
                     } 
                     else {
