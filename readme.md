@@ -176,7 +176,7 @@ svc.install();
 <ol>
 <li>Go to Windows Defender Firewall</li>
 <li>Go to Advanced settings</li>
-<li>Go to Advanced Inbound rules->New rule</li>
+<li>Go to Inbound rules->New rule</li>
 <li>Choose port ->Next</li>
 <li>Type the specific local port you want other devices to have access (eg 3001)</li>
 <li>Choose Allow the connection ; Apply the rules for domain,private and public</li>
