@@ -86,7 +86,7 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 ![](/renderfront.png)
 <img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
 
-<h1>Deployment Using PM2 inside LAN [work for both wired/wireless network] </h1>
+<h1>Deployment inside LAN [work for both wired/wireless network] Method 1: Using PM2  </h1>
 <pre>
 npm intall pm2 -g
 npm install serve -g
@@ -111,6 +111,78 @@ npm install serve -g
 <li>"pm2 resurrect" for restore all running pm2 processes</li>
 </ul>
 <p>Better mark down originalSourceCodePath, Service running port for migration purpose</p>
+<p>The downside of using PM2 for deployment is :</p>
+<ul><li> &#128553; User need to call pm2 resurrect everytime the server machine restart </li></ul>
+<h1>Deployment inside LAN  Method 2: Using IIS and Window Services</h1>
+<h2>Compared to PM2, This kind of deployment makes both frontend + backend automatically restart when system restart </h2>
+<h2>For deploying backend to Window Services</h2>
+<pre>npm install node-windows</pre>
+<ol>
+<li>Add script node-win-services.js to the backend folder</li>
+<pre>
+var Service = require('node-windows').Service;
+
+// Create a new service object
+var svc = new Service({
+  name:'mernToDoApi',
+  description: 'This is service for merntodoApi ',
+  script: 'C:\\Users\\user\\Documents\\MERNToDoList\\backend\\app.js' //obtained by copying the path of app.js
+});
+
+/**********install guide below  ***********/
+// Listen for the "install" event, which indicates the
+// process is available as a service.
+svc.on('install',function(){
+  svc.start();
+});
+
+svc.install();
+/**********  ***********/
+
+/**********Uninstall guide below  ***********/
+
+// svc.on('uninstall',function(){
+//     console.log('Uninstall complete.');
+//     console.log('The service exists: ',svc.exists);
+//   });
+  
+//   // Uninstall the service.
+//   svc.uninstall();
+/**********  ***********/
+</pre>
+<li>Run "node node-win-services" to run to Api on window services</li>
+<li>Test the api using 192.168.1.6(Your physicalIP):3000(port of the API u host) from another local device</li>
+</ol>
+<h2>For deploying frontend to IIS</h2>
+<h3>Setup</h3>
+<ol>
+<li>navigate to frontend folder => npm run build</li>
+<li>Choose Add website in IIS</li>
+<li>Type the site name, set the Physical Path to the build folder (eg. C:\Users\user\Documents\MERNToDoList\frontend\build) </li>
+<li>Choose a port for binding (eg 3001) </li>
+<li>Click OK to create website</li>
+</ol>
+<h3>Configure Authentication</h3>
+<ol>
+<li>Go to the website pannel, rightclick authentication icon ->edit permission</li>
+<li>choose security tab-> edit </li>
+<li>Add user </li>
+<li>Type Everyone, press check Names </li>
+<li>Set the permission</li>
+![iisUserConfig.png] 
+</ol>
+<h3>Configure Firewall</h3>
+<ol>
+<li>Go to Windows Defender Firewall</li>
+<li>Go to Advanced settings</li>
+<li>Go to Advanced Inbound rules->New rule</li>
+<li>Choose port ->Next</li>
+<li>Type the specific local port you want other devices to have access (eg 3001)</li>
+<li>Choose Allow the connection ; Apply the rules for domain,private and public</li>
+<li>Set a Name for the rule and click finish</li>
+</ol>
+<p>After configuring user permissions and firewall accessibility, the frontend app hosted on iis should be accessible by all local devices </p>
+<p>We can test it with 192.168.1.6(Your physicalIP):3001(port of the frontend u host) from another local device</p>
 <h1>MongoDB setup for accessing within LAN </h1>
 <ol>
 <li>go to C:\Program Files\MongoDB\Server\7.0\bin</li>

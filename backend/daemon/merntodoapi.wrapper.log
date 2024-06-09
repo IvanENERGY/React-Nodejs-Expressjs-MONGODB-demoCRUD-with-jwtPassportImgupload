@@ -1,0 +1,18 @@
+2024-06-09 16:51:24 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\user\Documents\MERNToDoList\backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\user\Documents\MERNToDoList\backend\app.js --scriptoptions= --log "mernToDoApi wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2024-06-09 16:51:24 - Started 3596
+2024-06-09 16:52:26 - Stopping merntodoapi.exe
+2024-06-09 16:52:26 - ProcessKill 3596
+2024-06-09 16:52:26 - Shutdown exception
+Message:系統關機進行中。
+
+Stacktrace:   於 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   於 System.Management.ManagementScope.InitializeGuts(Object o)
+   於 System.Management.ManagementScope.Initialize()
+   於 System.Management.ManagementObjectSearcher.Initialize()
+   於 System.Management.ManagementObjectSearcher.Get()
+   於 winsw.WrapperService.GetChildPids(Int32 pid)
+   於 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   於 winsw.WrapperService.StopIt()
+   於 winsw.WrapperService.OnShutdown()
+2024-06-09 16:52:57 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\user\Documents\MERNToDoList\backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\user\Documents\MERNToDoList\backend\app.js --scriptoptions= --log "mernToDoApi wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2024-06-09 16:52:57 - Started 7316
