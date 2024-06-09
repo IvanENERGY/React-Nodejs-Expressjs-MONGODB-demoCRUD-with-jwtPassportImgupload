@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import { UserContext } from "../App";
 
 export const Login=()=>{
@@ -20,9 +20,11 @@ export const Login=()=>{
             //console.log(response.data) {authSuccess:..,message:...} 
             if(response.data.authSuccess===true){
                 const token= response.data.token;
-                Cookies.set('token', token, { expires: 7, secure: true }); //7 is expiration date ; secure ensure cookie only send through https
+                //Cookies.set('token', token, { expires: 7, secure: true }); //7 is expiration date ; secure ensure cookie only send through https
                 navigate("/");
-                setUserContext({username,token:Cookies.get('token')});
+                //console.log(response.data);
+                //console.log("token is "+Cookies.get('token'));
+                setUserContext({username,token:token});
             }else{
                 alert(response.data.message);
             }

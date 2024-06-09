@@ -27,7 +27,7 @@ npx create-react-app . --template typescript<br>
 <br>
 npm start<br>
 npm install react-router-dom react-hook-form yup @hookform/resolvers axios dotenv <br>
-//authentication part:npm install js-cookie <br>
+<del>//authentication part:npm install js-cookie </del>changed to just passing into context directly<br>
 <br>
 <br>
 <br>
