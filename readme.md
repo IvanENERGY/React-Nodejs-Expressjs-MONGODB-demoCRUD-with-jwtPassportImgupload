@@ -161,6 +161,7 @@ svc.install();
 <li>Type the site name, set the Physical Path to the build folder (eg. C:\Users\user\Documents\MERNToDoList\frontend\build) </li>
 <li>Choose a port for binding (eg 3001) </li>
 <li>Click OK to create website</li>
+![iisStaticSiteConfig.png] 
 </ol>
 <h3>Configure Authentication</h3>
 <ol>
@@ -180,6 +181,7 @@ svc.install();
 <li>Type the specific local port you want other devices to have access (eg 3001)</li>
 <li>Choose Allow the connection ; Apply the rules for domain,private and public</li>
 <li>Set a Name for the rule and click finish</li>
+![iisFirewallConfig.png] 
 </ol>
 <p>After configuring user permissions and firewall accessibility, the frontend app hosted on iis should be accessible by all local devices </p>
 <p>We can test it with 192.168.1.6(Your physicalIP):3001(port of the frontend u host) from another local device</p>
