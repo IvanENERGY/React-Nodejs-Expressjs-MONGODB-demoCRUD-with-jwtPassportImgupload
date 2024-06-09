@@ -58,7 +58,7 @@ REACT_APP_BACKEND_URL=http://localhost:3000
 <pre>
 axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 </pre>
-<h1>Deployment on render</h1>
+<h1>Deployment on render (Internet)</h1>
 <p>Upload whole folder(backend+frontend) to gitHUb</p>
 <p>Configure Altas mongodb :set useracpw, set accessip 0.0.0.0 (all),get connection string
 <p>create package.json in outerfolder</p>
