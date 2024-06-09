@@ -5,7 +5,7 @@ Version history</h1>
 <p>0b1e1d6: changed frontend authentication from using "setCoookies" to "passing into Context directly"</p>
 <p>b421689 is the  version include CRUD + createAc/login/authentication/logout (Using PassportJS,JsonWebToken)</p>
 <p>d36c236 is the  version include only CRUD (barebone)</p>
-<h1>BACKEND</h1>
+<h1>&#128308;BACKEND</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
 //authentication part: npm install  express-session passport@0.5.2 passport-local-mongoose jsonwebtoken <br>
@@ -25,7 +25,7 @@ require('dotenv').config();
 
 <hr>
 
-<h1>FRONTEND</h1>
+<h1>&#128309;FRONTEND</h1>
 npx create-react-app . --template typescript<br>
 <br>
 npm start<br>
@@ -58,7 +58,7 @@ REACT_APP_BACKEND_URL=http://localhost:3000
 <pre>
 axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 </pre>
-<h1>Deployment on render (Internet)</h1>
+<h1>&#128640;Deployment on render (Internet)</h1>
 <p>Upload whole folder(backend+frontend) to gitHUb</p>
 <p>Configure Altas mongodb :set useracpw, set accessip 0.0.0.0 (all),get connection string
 <p>create package.json in outerfolder</p>
@@ -88,7 +88,7 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 ![](/renderfront.png)
 <img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
 
-<h1>Deployment inside LAN [work for both wired/wireless network] Method 1: Using PM2  </h1>
+<h1>&#128640;Deployment inside LAN [work for both wired/wireless network] Method 1: Using PM2  </h1>
 <pre>
 npm intall pm2 -g
 npm install serve -g
@@ -115,7 +115,7 @@ npm install serve -g
 <p>Better mark down originalSourceCodePath, Service running port for migration purpose</p>
 <p>The downside of using PM2 for deployment is :</p>
 <ul><li> &#128553; User need to call pm2 resurrect everytime the server machine restart </li></ul>
-<h1>Deployment inside LAN  Method 2: Using IIS and Window Services</h1>
+<h1>&#128640;Deployment inside LAN  Method 2: Using IIS and Window Services</h1>
 <h2>Compared to PM2, This kind of deployment makes both frontend + backend automatically restart when system restart </h2>
 <h2>For deploying backend to Window Services</h2>
 <pre>npm install node-windows</pre>
