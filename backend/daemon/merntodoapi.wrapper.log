@@ -32,3 +32,49 @@ Stacktrace:   於 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
 2024-06-09 23:06:01 - Finished merntodoapi.exe
 2024-06-10 03:07:31 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\user\Documents\MERNToDoList\backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\user\Documents\MERNToDoList\backend\app.js --scriptoptions= --log "mernToDoApi wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2024-06-10 03:07:31 - Started 12588
+2024-06-10 03:31:02 - Stopping merntodoapi.exe
+2024-06-10 03:31:02 - ProcessKill 12588
+2024-06-10 03:31:03 - Found child process: 25064 Name: conhost.exe
+2024-06-10 03:31:03 - Found child process: 28036 Name: node.exe
+2024-06-10 03:31:03 - Stopping process 25064
+2024-06-10 03:31:03 - Send SIGINT 25064
+2024-06-10 03:31:03 - SIGINT to 25064 failed - Killing as fallback
+2024-06-10 03:31:03 - Stopping process 28036
+2024-06-10 03:31:03 - Send SIGINT 28036
+2024-06-10 03:31:03 - SIGINT to 28036 failed - Killing as fallback
+2024-06-10 03:31:03 - Stopping process 12588
+2024-06-10 03:31:03 - Send SIGINT 12588
+2024-06-10 03:31:03 - SIGINT to 12588 failed - Killing as fallback
+2024-06-10 03:31:03 - Finished merntodoapi.exe
+2024-06-12 22:38:23 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\user\Documents\MERNToDoList\backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\user\Documents\MERNToDoList\backend\app.js --scriptoptions= --log "mernToDoApi wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2024-06-12 22:38:23 - Started 7076
+2024-06-12 22:38:57 - Stopping merntodoapi.exe
+2024-06-12 22:38:57 - ProcessKill 7076
+2024-06-12 22:38:57 - Shutdown exception
+Message:系統關機進行中。
+
+Stacktrace:   於 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   於 System.Management.ManagementScope.InitializeGuts(Object o)
+   於 System.Management.ManagementScope.Initialize()
+   於 System.Management.ManagementObjectSearcher.Initialize()
+   於 System.Management.ManagementObjectSearcher.Get()
+   於 winsw.WrapperService.GetChildPids(Int32 pid)
+   於 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   於 winsw.WrapperService.StopIt()
+   於 winsw.WrapperService.OnShutdown()
+2024-06-12 23:28:01 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\user\Documents\MERNToDoList\backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\user\Documents\MERNToDoList\backend\app.js --scriptoptions= --log "mernToDoApi wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2024-06-12 23:28:01 - Started 7228
+2024-06-14 16:19:53 - Stopping merntodoapi.exe
+2024-06-14 16:19:53 - ProcessKill 7228
+2024-06-14 16:19:53 - Found child process: 7268 Name: conhost.exe
+2024-06-14 16:19:53 - Found child process: 8660 Name: node.exe
+2024-06-14 16:19:53 - Stopping process 7268
+2024-06-14 16:19:53 - Send SIGINT 7268
+2024-06-14 16:19:53 - SIGINT to 7268 failed - Killing as fallback
+2024-06-14 16:19:53 - Stopping process 8660
+2024-06-14 16:19:53 - Send SIGINT 8660
+2024-06-14 16:19:53 - SIGINT to 8660 failed - Killing as fallback
+2024-06-14 16:19:53 - Stopping process 7228
+2024-06-14 16:19:53 - Send SIGINT 7228
+2024-06-14 16:19:53 - SIGINT to 7228 failed - Killing as fallback
+2024-06-14 16:19:53 - Finished merntodoapi.exe

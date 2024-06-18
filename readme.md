@@ -1,6 +1,41 @@
-
-<h1>
-Version history</h1>
+<h1>Repo intro</h1>
+<p>This is a demo full-stack application built using :</p>
+<table>
+<thead>
+  <th>Frontend</th>
+  <th rowspan="2">Backend</th>
+</thead>
+<tbody>
+  <tr>
+  ReactJS
+  </tr>
+  <tr>
+  NodeJS & Express JS
+  </tr>
+  <tr>
+  MongoDB
+  </tr>
+</tbody>
+</table>
+<p>The whole application follows MVC pattern </p>
+<p>It supports the following functionalities:</p>
+<ul>
+<li>Basic CRUD operation</li>
+<li>Register/Login/Logout (w/PassportJS & JWT)</li>
+<li>Image Storing & Retrieval</li>
+</ul>
+<h1>Screenshot</h1>
+<p>[appScreenshot1.png]</p>
+<img width="811" alt="appScreenshot1" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/228ffb9e-14cc-4a96-8d07-3fd1a6695e15">
+<p>[appScreenshot2.png]</p>
+<img width="1013" alt="appScreenshot2" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/71661307-0ffa-46d4-a6a6-ce760cb9da83">
+<p>[appScreenshot3.png]</p>
+<img width="1365" alt="appScreenshot3" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/51e2c057-3d70-4e46-8a98-ef491405595d">
+<p>[appScreenshot4.png]</p>
+<img width="1396" alt="appScreenshot4" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/a0a6e487-040e-4466-b243-3f1b14424880">
+<p>[appScreenshot5.png]</p>
+<img width="1323" alt="appScreenshot5" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/f74cc950-e0eb-4e04-b125-e8113e4f2cd5">
+<h1>Version history (from new to old)</h1>
 <p>c336382:Added Upload Image / Retrieve Image </p>
 <p>0b1e1d6: changed frontend authentication from using "setCoookies" to "passing into Context directly"</p>
 <p>b421689 is the  version include CRUD + createAc/login/authentication/logout (Using PassportJS,JsonWebToken)</p>
