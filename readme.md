@@ -22,6 +22,7 @@
 <li>Register/Login/Logout (w/PassportJS & JWT)</li>
 <li>Image Storing & Retrieval</li>
 </ul>
+<p>&#128155;Leave a star if u like it!</p>
 <h1>Screenshot</h1>
 <p>[appScreenshot1.png]</p>
 <img width="811" alt="appScreenshot1" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/228ffb9e-14cc-4a96-8d07-3fd1a6695e15">
