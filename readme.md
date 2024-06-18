@@ -1,19 +1,17 @@
 <h1>Repo intro</h1>
 <p>This is a demo full-stack application built using :</p>
 <table>
-<thead>
-  <th>Frontend</th>
-  <th rowspan="2">Backend</th>
-</thead>
 <tbody>
   <tr>
-  ReactJS
+    <th>Frontend</th>
+    <td> ReactJS</td>
   </tr>
   <tr>
-  NodeJS & Express JS
+    <th rowspan="2">Backend</th>
+    <td> NodeJS & Express JS</td>
   </tr>
   <tr>
-  MongoDB
+    <td> MongoDB</td>
   </tr>
 </tbody>
 </table>
