@@ -18,7 +18,7 @@
 <p>The backend follows MVC pattern </p>
 <p>The fullstack application supports the following functionalities:</p>
 <ul>
-<li>Basic CRUD operation</li>
+<li>Basic CRUD operation (on Task Object)</li>
 <li>Register/Login/Logout (w/PassportJS & JWT)</li>
 <li>Image Storing & Retrieval</li>
 </ul>
@@ -39,7 +39,7 @@
 <p>0b1e1d6: changed frontend authentication from using "setCoookies" to "passing into Context directly"</p>
 <p>b421689 is the  version include CRUD + createAc/login/authentication/logout (Using PassportJS,JsonWebToken)</p>
 <p>d36c236 is the  version include only CRUD (barebone)</p>
-<h1>&#128308;BACKEND</h1>
+<h1>&#128308;BACKEND creation</h1>
 npm init <br>
 npm install nodemon mongoose express http-status-codes cors mongodb dotenv <br>
 //authentication part: npm install  express-session passport@0.5.2 passport-local-mongoose jsonwebtoken <br>
@@ -59,7 +59,7 @@ require('dotenv').config();
 
 <hr>
 
-<h1>&#128309;FRONTEND</h1>
+<h1>&#128309;FRONTEND creation</h1>
 npx create-react-app . --template typescript<br>
 <br>
 npm start<br>
@@ -81,7 +81,7 @@ for this app, data validation only performed in frontend<br>
     })
 </pre>
 //for update, we do valid check using vanilla js 
-
+<hr>
 <h5>add .env file</h5>
 <pre>
 ###########VARIABLE name must be started with REACT_APP
