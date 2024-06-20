@@ -1,5 +1,5 @@
 <h1>Repo intro</h1>
-<p>This is a demo full-stack application built using :</p>
+<p>This is a demo CRUD full-stack application built using :</p>
 <table>
 <tbody>
   <tr>
