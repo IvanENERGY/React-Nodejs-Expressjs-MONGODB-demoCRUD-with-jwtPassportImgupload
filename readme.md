@@ -15,8 +15,8 @@
   </tr>
 </tbody>
 </table>
-<p>The whole application follows MVC pattern </p>
-<p>It supports the following functionalities:</p>
+<p>The backend follows MVC pattern </p>
+<p>The fullstack application supports the following functionalities:</p>
 <ul>
 <li>Basic CRUD operation</li>
 <li>Register/Login/Logout (w/PassportJS & JWT)</li>
