@@ -34,6 +34,13 @@
 <img width="1396" alt="appScreenshot4" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/a0a6e487-040e-4466-b243-3f1b14424880">
 <p>[appScreenshot5.png]</p>
 <img width="1323" alt="appScreenshot5" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/f74cc950-e0eb-4e04-b125-e8113e4f2cd5">
+<p>[appScreenshot6.png]</p>
+<img width="1471" alt="appScreenshot6" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/cb807f49-ec90-4d32-a63e-6d911f9a41e4">
+<p>[appScreenshot7.png]</p>
+<img width="1088" alt="appScreenshot7" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/166f750a-98c6-4608-8fda-189cfb4838a4">
+<p>[appScreenshot8.png]</p>
+<img width="683" alt="appScreenshot8" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/bf0c072a-1661-4d01-8d74-3f089596ba9c">
+
 <h1>Version history (from new to old)</h1>
 <p>c336382:Added Upload Image / Retrieve Image </p>
 <p>0b1e1d6: changed frontend authentication from using "setCoookies" to "passing into Context directly"</p>
