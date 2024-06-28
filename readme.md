@@ -1,5 +1,6 @@
 <h1>Overview</h1>
-![project_mern_todo](https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/dc1df2ee-1290-4637-806a-4e56848fd9f2)
+
+![project_mern_todo](https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/7378203e-f600-44fb-a3ba-34a8b9fc147e)
 <h1>Repo intro</h1>
 <p>This is a demo CRUD full-stack application built using :</p>
 <table>
