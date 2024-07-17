@@ -134,7 +134,10 @@ axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`)
 <h5>Create static site in render</h5>
 ![](/renderfront.png)
 <img width="923" alt="renderfront" src="https://github.com/IvanENERGY/MERN-CRUD-ToDoList/assets/90034836/0d2dc300-4288-4046-96c0-3008d6374d4e">
-
+<h1>Deploying on your own PC (Internet)</h1>
+<p>Go to router settings -> configure port forwarding (HTTP,192.168.1.6, 3000-3001)</p>
+<p>Add new inbound rules to firewall ; allow access for port 3000,3001 </p>
+<p>Get your public ip address(eg. 119.237.169.103), u can now access the app hosted on localhost via port 3000 from outside-network(ie. 119.237.169.103:3000)</p>
 <h1>&#128640;Deployment inside LAN [work for both wired/wireless network] Method 1: Using PM2  </h1>
 <pre>
 npm intall pm2 -g
